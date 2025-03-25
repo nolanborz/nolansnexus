@@ -8,9 +8,6 @@ module ArticlesHelper
 
     # makes sure we don't have like less than a minute that'd be awkward
     ttr = [ 1, minutes ].max
-    if ttr == 1
-      return ttr.to_s + " minute"
-    end
-    ttr.to_s + " minutes"
+    ttr == 1 ? "#{ttr} minute" : "#{ttr} minutes"
   end
 end
